@@ -8,7 +8,7 @@
 
 ### 关于报错 ###
 
-1. > TypeError: __call__() missing 1 required positional argument: 'send'
+1. > TypeError: \_\_call\_\_() missing 1 required positional argument: 'send'
 
 
     将 *.../compatibility.py* 中的 
