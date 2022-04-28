@@ -1,10 +1,11 @@
-## 本系统采用 Python + Django + Django Channels + bootstrap + sqlite3 + Redis 搭建。
+## 本系统采用 Python + Django + Django Channels + bootstrap + Redis 搭建。
 
 ### 说明 ###
 
 * Django == 4.0.3
 * Channels == 3.0.4
 * Redis == 5.0.14
+* sqlite3 可改换为 MySQL（见相关注释）
 
 ### 关于报错 ###
 
