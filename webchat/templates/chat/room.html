@@ -22,13 +22,15 @@
         <div id="room-list">
             <ul class="list-group" style="margin-top: 15px">
                 {% for user in users_online %}
-                    {% if user.username == username %}
-                    {% else %}
-                        <li class="list-group-item">
-                            <a href="{% url 'friendprofile' username user.username %}"
-                               class="list-group-item">{{ user.username }}</a>
-                        </li>
-                    {% endif %}
+                    <li class="list-group-item">
+                        {% if user.username == username %}
+                        <a href="{% url 'userprofile' user.username %}"
+                           class="list-group-item">{{ user.username }}</a>                            
+                        {% else %}
+                        <a href="{% url 'friendprofile' username user.username %}"
+                           class="list-group-item">{{ user.username }}</a>
+                        {% endif %}
+                    </li>
                 {% endfor %}
             </ul>
         </div>
@@ -37,13 +39,10 @@
             <div id="room-list">
                 <ul class="list-group" style="margin-top: 15px">
                     {% for user in users_offline %}
-                        {% if user.username == username %}
-                        {% else %}
-                            <li class="list-group-item">
-                                <a href="{% url 'friendprofile' username user.username %}"
-                                   class="list-group-item">{{ user.username }}</a>
-                            </li>
-                        {% endif %}
+                        <li class="list-group-item">
+                            <a href="{% url 'friendprofile' username user.username %}"
+                               class="list-group-item">{{ user.username }}</a>
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
