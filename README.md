@@ -9,7 +9,7 @@
 
 ### 关于报错 ###
 
-1. > TypeError: \_\_call\_\_() missing 1 required positional argument: 'send'
+1. > TypeError: __call__() missing 1 required positional argument: 'send'
 
 
     将 *.../compatibility.py* 中的 
@@ -31,6 +31,7 @@
     
     * 下载并安装Redis-x64-5.0.14.msi，地址：https://github.com/tporadowski/redis/releases
     * 安装完成后，启动服务（先运行redis-server.exe，再运行redis-cli.exe）
+      * 注：程序运行时需保持此服务运行。
 
 3. > 其他报错请自行解决
 
@@ -43,3 +44,17 @@
  - 用户进入和离开聊天室时发送广播通知
  - 创建临时聊天室并进行实时通信
 
+### test
+
+ * test
+   * a@mail 
+   * a
+ * test1
+   * 1@1    
+   * 1
+ * test2
+   * 2@2    
+   * 2
+ * test3
+   * 3@3    
+   * 3

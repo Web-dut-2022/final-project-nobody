@@ -26,13 +26,15 @@
         <div id="room-list">
             <ul class="list-group" style="margin-top: 15px">
                 {% for user in users_online %}
-                    {% if user.username == user_obj.username %}
-                    {% else %}
-                        <li class="list-group-item">
-                            <a href="{% url 'friendprofile' user_obj.username user.username %}"
-                               class="list-group-item">{{ user.username }}</a>
-                        </li>
-                    {% endif %}
+                    <li class="list-group-item">
+                        {% if user.username == user_obj.username %}
+                        <a href="{% url 'userprofile' user.username %}"
+                           class="list-group-item">{{ user.username }}</a>                            
+                        {% else %}
+                        <a href="{% url 'friendprofile' user_obj.username user.username %}"
+                           class="list-group-item">{{ user.username }}</a>
+                        {% endif %}
+                    </li>
                 {% endfor %}
             </ul>
         </div>

@@ -14,7 +14,7 @@
 </head>
 
 
-<body style="background-image: url(/static/img/webchat.jpg); background-attachment:fixed; background-position:center; background-size:100% 100%; ">
+<body style="background-image: url(/static/img/webchat.png); background-attachment:fixed; background-position:center; background-size:100% 100%; ">
 <div class="container" style="height: 650px; margin-top: 50px; padding: 0px; background-color: #f5f5f5; ">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -33,17 +33,16 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">webchat 实时聊天系统<span class="sr-only">(current)</span></a></li>
-                    <li><a href="{% block back2chat_url %}{% endblock back2chat_url %}">chat</a></li>
+                    <li><a href="{% block back2chat_url %}{% endblock back2chat_url %}" style="font-size: 18px;">Chat</a></li>
                 </ul>
-                {% block login %}
-                {% endblock login %}
+                {% block login %}{% endblock login %}
             </div>
         </div>
     </nav>
 
     <div class="container row" style="margin-top: -20px">
         {% block room %}
+
         {% endblock room %}
     </div>
 
